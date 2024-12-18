@@ -7,84 +7,88 @@
   <meta name="Generator" content="Cocoa HTML Writer">
   <meta name="CocoaVersion" content="2575.2">
   <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Hiragino Sans'; -webkit-text-stroke: #000000}
+    span.s1 {font-kerning: none}
+    span.s2 {font: 12.0px 'Hiragino Sans'; font-kerning: none}
+    span.s3 {font: 12.0px Helvetica; font-kerning: none}
   </style>
 </head>
 <body>
-<p class="p1">&lt;!DOCTYPE html&gt;</p>
-<p class="p1">&lt;html lang="ja"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;レースエントリー&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://static.line-scdn.net/liff/edge/2/sdk.js"&gt;&lt;/script&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;h1&gt;レースエントリー受付&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;form id="entryForm"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- LINEから取得したユーザー名を入力 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;エントリーネーム:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="entryName" placeholder="読み込み中..." required&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- チーム名 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;チーム名:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="teamName" placeholder="チーム名を入力" required&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- クラス選択 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;クラス選択:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;select id="classSelection"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="45"&gt;45&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="80"&gt;80&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="Open"&gt;Open&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="FlatheadV8"&gt;FlatheadV8&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="4Banger"&gt;4Banger&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;option value="Exivision"&gt;Exivision&lt;/option&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- 画像アップロード --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;車体右画像:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="file" id="imageRight" accept="image/*" required&gt;</p>
-<p class="p2"><span class="Apple-converted-space">        </span></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;label&gt;車体左画像:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;input type="file" id="imageLeft" accept="image/*" required&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- 45クラスのみキャブ画像 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="cabImageField" style="display:none;"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;label&gt;キャブ画像:&lt;/label&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="file" id="imageCab" accept="image/*"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button type="submit"&gt;送信&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/form&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>// LIFFの初期化</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.addEventListener("DOMContentLoaded", function () {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>liff.init({ liffId: "2006687211-vl3ejZaX" }) // ここに発行されたLIFF IDを入れる</p>
-<p class="p1"><span class="Apple-converted-space">                </span>.then(() =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>console.log("LIFF initialized");</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>// ユーザープロフィールを取得して入力欄にセット</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>liff.getProfile().then(profile =&gt; {</p>
-<p class="p1"><span class="Apple-converted-space">                        </span>document.getElementById("entryName").value = profile.displayName;</p>
-<p class="p1"><span class="Apple-converted-space">                    </span>});</p>
-<p class="p1"><span class="Apple-converted-space">                </span>})</p>
-<p class="p1"><span class="Apple-converted-space">                </span>.catch(err =&gt; console.error("LIFF initialization failed", err));</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// クラス選択によるキャブ画像フィールドの表示</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("classSelection").addEventListener("change", function () {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>const selectedClass = this.value;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById("cabImageField").style.display = (selectedClass === "45") ? "block" : "none";</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>// フォーム送信処理</p>
-<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById("entryForm").addEventListener("submit", function (e) {</p>
-<p class="p1"><span class="Apple-converted-space">            </span>e.preventDefault();</p>
-<p class="p1"><span class="Apple-converted-space">            </span>alert("エントリーが送信されました！");</p>
-<p class="p1"><span class="Apple-converted-space">            </span>// ここでサーバーにデータを送信する処理を追加</p>
-<p class="p1"><span class="Apple-converted-space">        </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
+<p class="p1"><span class="s1">&lt;html lang="ja"&gt;</span></p>
+<p class="p1"><span class="s1">&lt;head&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;</span><span class="s2">レースエントリー</span><span class="s1">&lt;/title&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://static.line-scdn.net/liff/edge/2/sdk.js"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
+<p class="p1"><span class="s1">&lt;body&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1&gt;</span><span class="s2">レースエントリー受付</span><span class="s1">&lt;/h1&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;form id="entryForm"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- LINE</span><span class="s2">から取得したユーザー名を入力</span><span class="s1"> --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label&gt;</span><span class="s2">エントリーネーム</span><span class="s1">:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="entryName" placeholder="</span><span class="s2">読み込み中</span><span class="s1">..." required&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- </span><span class="s2">チーム名</span><span class="s1"> --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label&gt;</span><span class="s2">チーム名</span><span class="s1">:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="teamName" placeholder="</span><span class="s2">チーム名を入力</span><span class="s1">" required&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- </span><span class="s2">クラス選択</span><span class="s1"> --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label&gt;</span><span class="s2">クラス選択</span><span class="s1">:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;select id="classSelection"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;option value="45"&gt;45&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;option value="80"&gt;80&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;option value="Open"&gt;Open&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;option value="FlatheadV8"&gt;FlatheadV8&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;option value="4Banger"&gt;4Banger&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;option value="Exivision"&gt;Exivision&lt;/option&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- </span><span class="s2">画像アップロード</span><span class="s1"> --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label&gt;</span><span class="s2">車体右画像</span><span class="s1">:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="file" id="imageRight" accept="image/*" required&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">        </span></span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label&gt;</span><span class="s2">車体左画像</span><span class="s1">:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="file" id="imageLeft" accept="image/*" required&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- 45</span><span class="s2">クラスのみキャブ画像</span><span class="s1"> --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="cabImageField" style="display:none;"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;label&gt;</span><span class="s2">キャブ画像</span><span class="s1">:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;input type="file" id="imageCab" accept="image/*"&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button type="submit"&gt;</span><span class="s2">送信</span><span class="s1">&lt;/button&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/form&gt;</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// LIFF</span><span class="s2">の初期化</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.addEventListener("DOMContentLoaded", function () {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>liff.init({ liffId: "2006687211-nxm8KDMb" }) // </span><span class="s2">ここに発行された</span><span class="s1">LIFF ID</span><span class="s2">を入れる</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>.then(() =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.log("LIFF initialized");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>// </span><span class="s2">ユーザープロフィールを取得して入力欄にセット</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>liff.getProfile().then(profile =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>document.getElementById("entryName").value = profile.displayName;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>})</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>.catch(err =&gt; console.error("LIFF initialization failed", err));</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">        </span>// </span><span class="s1">クラス選択によるキャブ画像フィールドの表示</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById("classSelection").addEventListener("change", function () {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const selectedClass = this.value;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById("cabImageField").style.display = (selectedClass === "45") ? "block" : "none";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>// </span><span class="s2">フォーム送信処理</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.getElementById("entryForm").addEventListener("submit", function (e) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>e.preventDefault();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>alert("</span><span class="s2">エントリーが送信されました！</span><span class="s1">");</span></p>
+<p class="p3"><span class="s3"><span class="Apple-converted-space">            </span>// </span><span class="s1">ここでサーバーにデータを送信する処理を追加</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
+<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
 </body>
 </html>
