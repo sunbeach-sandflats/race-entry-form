@@ -19,23 +19,49 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;title&gt;レースエントリー&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- LIFF SDKの読み込み --&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script src="https://static.line-scdn.net/liff/edge/2/sdk.js"&gt;&lt;/script&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;style&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>body {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>max-width: 600px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin: 0 auto;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>form {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>display: flex;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>flex-direction: column;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>label, input, select {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>button {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #4CAF50;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>color: white;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: none;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>cursor: pointer;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>button:hover {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #45a049;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>#status {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>margin-top: 20px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>padding: 10px;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>background-color: #f8f8f8;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>border: 1px solid #ddd;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>}</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</span></p>
 <p class="p1"><span class="s1">&lt;/head&gt;</span></p>
 <p class="p1"><span class="s1">&lt;body&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;h1&gt;レースエントリー受付&lt;/h1&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- フォーム --&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;form id="entryForm"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- LINEから取得したユーザー名を入力 --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label&gt;エントリーネーム:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="entryName"&gt;エントリーネーム:&lt;/label&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="entryName" placeholder="読み込み中..." required&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- チーム名 --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label&gt;チーム名:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="teamName"&gt;チーム名:&lt;/label&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="text" id="teamName" placeholder="チーム名を入力" required&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- クラス選択 --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label&gt;クラス選択:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="classSelection"&gt;クラス選択:&lt;/label&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;select id="classSelection"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;option value="45"&gt;45&lt;/option&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;option value="80"&gt;80&lt;/option&gt;</span></p>
@@ -45,78 +71,78 @@
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;option value="Exivision"&gt;Exivision&lt;/option&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/select&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- 画像アップロード --&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label&gt;車体右画像:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="imageRight"&gt;車体右画像:&lt;/label&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="file" id="imageRight" accept="image/*" required&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label&gt;車体左画像:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;label for="imageLeft"&gt;車体左画像:&lt;/label&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;input type="file" id="imageLeft" accept="image/*" required&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;!-- 45クラスのみキャブ画像 --&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;div id="cabImageField" style="display:none;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;label&gt;キャブ画像:&lt;/label&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;label for="imageCab"&gt;キャブ画像:&lt;/label&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>&lt;input type="file" id="imageCab" accept="image/*"&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>&lt;button type="submit"&gt;送信&lt;/button&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/form&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p id="status"&gt;&lt;/p&gt; &lt;!-- ステータスメッセージ用 --&gt;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;p id="status"&gt;&lt;/p&gt;</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;!-- LIFFの初期化とフォーム処理 --&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;script&gt;</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>document.addEventListener("DOMContentLoaded", function () {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// LIFFの初期化</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>liff.init({</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>liffId: "2006687211-nxm8KDMb" // ここに発行されたLIFF IDを設定</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>})</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.then(() =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.log("LIFF initialized");</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>return liff.getProfile(); // LINEプロフィールを取得</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>})</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.then(profile =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.log("Profile:", profile);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// LINEの表示名をエントリーネーム欄にセット</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById("entryName").value = profile.displayName;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>})</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>.catch(err =&gt; {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.error("LIFF初期化エラー:", err);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById("status").innerText = "エラー: LIFFの初期化に失敗しました";</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const statusElement = document.getElementById("status");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const entryForm = document.getElementById("entryForm");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const classSelection = document.getElementById("classSelection");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>const cabImageField = document.getElementById("cabImageField");</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// クラス選択によるキャブ画像フィールドの表示切替</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById("classSelection").addEventListener("change", function () {</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const selectedClass = this.value;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>document.getElementById("cabImageField").style.display = (selectedClass === "45") ? "block" : "none";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>function showStatus(message, isError = false) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>statusElement.textContent = message;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>statusElement.style.color = isError ? "red" : "green";</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>}</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// LIFFの初期化</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>liff.init({ liffId: "YOUR_LIFF_ID" })</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>.then(() =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.log("LIFF initialized");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>return liff.getProfile();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>})</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>.then(profile =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.log("Profile:", profile);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>document.getElementById("entryName").value = profile.displayName;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>})</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>.catch(err =&gt; {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.error("LIFF初期化エラー:", err);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>showStatus("エラー: LIFFの初期化に失敗しました。ページを再読み込みしてください。", true);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>});</span></p>
+<p class="p2"><span class="s1"></span><br></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// クラス選択による表示切替</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>classSelection.addEventListener("change", function () {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>cabImageField.style.display = (this.value === "45") ? "block" : "none";</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
 <p class="p2"><span class="s1"></span><br></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>// フォーム送信処理</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>document.getElementById("entryForm").addEventListener("submit", function (e) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>entryForm.addEventListener("submit", async function (e) {</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>e.preventDefault();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>showStatus("送信中...");</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 入力データの取得</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const entryName = document.getElementById("entryName").value;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const teamName = document.getElementById("teamName").value;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const classSelection = document.getElementById("classSelection").value;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const imageRight = document.getElementById("imageRight").files[0];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const imageLeft = document.getElementById("imageLeft").files[0];</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const imageCab = (classSelection === "45") ? document.getElementById("imageCab").files[0] : null;</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>const formData = new FormData(this);</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// 確認用のコンソール出力</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.log("エントリーネーム:", entryName);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.log("チーム名:", teamName);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.log("クラス:", classSelection);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.log("車体右画像:", imageRight);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>console.log("車体左画像:", imageLeft);</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>if (imageCab) console.log("キャブ画像:", imageCab);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>try {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const response = await fetch('YOUR_API_ENDPOINT', {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>method: 'POST',</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>body: formData</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>});</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// ユーザーへの確認</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>alert("エントリーが送信されました！\n" +</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                      </span>"エントリーネーム: " + entryName + "\n" +</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                      </span>"チーム名: " + teamName + "\n" +</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                      </span>"クラス: " + classSelection);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>if (!response.ok) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                        </span>throw new Error('サーバーエラーが発生しました');</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>}</span></p>
 <p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>// ★ここでサーバー送信処理やGoogleスプレッドシートへの連携を追加する</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>const result = await response.json();</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>showStatus("エントリーが正常に送信されました！");</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.log(result);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>} catch (error) {</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>console.error('送信エラー:', error);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                    </span>showStatus("エントリーの送信中にエラーが発生しました。もう一度お試しください。", true);</span></p>
+<p class="p1"><span class="s1"><span class="Apple-converted-space">                </span>}</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">            </span>});</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">        </span>});</span></p>
 <p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</span></p>
